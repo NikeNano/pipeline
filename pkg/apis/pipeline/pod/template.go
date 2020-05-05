@@ -96,6 +96,9 @@ type Template struct {
 	// HostNetwork specifies whether the pod may use the node network namespace
 	// +optional
 	HostNetwork bool `json:"hostNetwork"`
+
+	// ImagePullSecrets gives the name of the secret used by the pod to pull the image if specified
+	ImagePullSecrets []corev1.LocalObjectReference
 }
 
 func (tpl *Template) Equals(other *Template) bool {
