@@ -745,7 +745,7 @@ script-heredoc-randomly-generated-78c5n
 		},
 		trs: v1beta1.TaskRunSpec{
 			PodTemplate: &v1alpha1.PodTemplate{
-				ImagePullSecrets: []corev1.LocalObjectReference{corev1.LocalObjectReference{Name: "imageSecret"}},
+				ImagePullSecrets: []corev1.LocalObjectReference{{Name: "imageSecret"}},
 			},
 		},
 		want: &corev1.PodSpec{
